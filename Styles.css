@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.button-img img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+header-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.pulsating-text {
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0.5rem 0;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
